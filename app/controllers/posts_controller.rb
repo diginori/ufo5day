@@ -4,7 +4,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+	  if params[:category].present?
+		  @category = Category.find(params[:category])
+		  @posts = @category.posts
+	  else
+    		  @posts = Post.all
+	  end
   end
 
   # GET /posts/1
