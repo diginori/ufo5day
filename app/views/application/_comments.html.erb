@@ -1,0 +1,12 @@
+<div > 
+<hr />
+  <div class ="comments">
+    <%=render commentable.comments %>
+  </div>
+<%= form_for [commentable, commentable.comments.build], remote: true do |f| %>
+  <div class = "form-group">
+    <%= f.text_area :body, class: 'redactor'%>
+    <%= f.submit class: 'btn btn-default' %>
+  </div>
+<% end %>
+</div>

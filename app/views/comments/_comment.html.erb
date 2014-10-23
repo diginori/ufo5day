@@ -1,0 +1,4 @@
+<%= content_tag_for :div, comment do %>
+<div><%= comment.user.email if comment.user? %></div>
+<div><%= raw comment.body %></div>
+<% end %>

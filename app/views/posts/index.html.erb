@@ -16,8 +16,8 @@
         <td><%= raw post.body %></td>
         <td><%= post.user.email if post.user %></td>
         <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) if can? :edit, post %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } if can? :edit, post %></td>
       </tr>
     <% end %>
   </tbody>

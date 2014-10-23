@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   resources :categories
 
