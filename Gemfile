@@ -10,6 +10,8 @@ gem 'mini_magick'
 
 gem 'redactor-rails'
 
+gem 'cancan'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
