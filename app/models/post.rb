@@ -4,4 +4,5 @@ class Post
   belongs_to :user
   field :title, type: String
   field :body, type: String
+  mount_uploader :featured, ImageUploader
 end

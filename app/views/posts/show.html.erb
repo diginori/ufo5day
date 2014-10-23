@@ -11,7 +11,12 @@
 
 <p>
   <strong>Body:</strong>
-  <%= @post.body %>
+  <%= raw @post.body %>
+</p>
+
+<p>
+	<b>Image:</b>
+    <%= image_tag @post.featured_url(:thumb) if @post.featured? %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
