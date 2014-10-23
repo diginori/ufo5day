@@ -8,6 +8,8 @@ gem 'carrierwave'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'mini_magick'
 
+gem 'redactor-rails'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
