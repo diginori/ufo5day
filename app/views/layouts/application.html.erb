@@ -13,6 +13,10 @@
 		<li><%= link_to 'HOME', root_path %></li>
 		<li><%= link_to 'POST', posts_path %></li>
 		<li><%= link_to 'CATE', categories_path %></li>
+
+		<% Category.all.each do |category| %>
+			<li><%= link_to category.name, posts_path(category: category) %></li>
+		<% end %>
 	</ul>
 	</nav>
 
