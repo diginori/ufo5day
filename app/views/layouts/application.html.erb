@@ -18,6 +18,15 @@
 			<li><%= link_to category.name, posts_path(category: category) %></li>
 		<% end %>
 	</ul>
+	<ul>
+		<% if user_signed_in? %>
+			<li><%= current_user.email %></li>
+			<li><%= link_to 'LOG-OUT', destroy_user_session_path, method: :delete %></li>
+		<% else %>
+			<li><%= link_to 'LOG-IN', new_user_session_path %></li>
+			<li><%= link_to 'JONIN', new_user_registration_path %></li>
+		<% end %>
+	</ul>
 	</nav>
 
 <%= yield %>
